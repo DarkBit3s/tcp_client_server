@@ -4,10 +4,16 @@ This is a python based tcp client program used to test for services, sending gar
 run the client code as:
  <i><b>python tcp_client.py --help</b></i>
  <br><h1>NOTE</h1>
- if you test this on localhost first start the APACHE server on your machine otherwise it wont work or if there is a service running on your localhost you can gic ethe port of that service to test.
+ if you only test with this client program on localhost first start the APACHE server on your machine otherwise it wont work or if there is a service running on your localhost you can gic ethe port of that service to test.
  <h3><b>service apache2 start</b></h3>
  then run python script on this port.
 In this code we making assumption about socket that this connection given always works and server is always expecting us to send data back to us.
 TCP server code is same as tcp client code. TCP server is used when writing commands shell or crafting a proxy. 
  <i><b>python tcp_server.py</b></i>
+<br><br>
 in practice case the TCP_client and tcp_server code run like this:
+python tcp_server.py
+then start client program
+python tcp_client.py -t 127.0.0.2 -p 80
+
+<b>you can change the ip and port in both program according to your need</b>
